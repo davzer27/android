@@ -1,0 +1,134 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+MERGED from [com.android.support:design:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/f92f6f64b0d202075ab1c615d3d3475b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/692b001cbdbfd6ef26ca89abe751c0e6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/6ac70edb640450bbf5e32465579778e6/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.0.aar/f400e36d56a0bcefab7cd7b33b0ed24a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.0.aar/ec9bff82e7b698c4e9ca4b32d7c47c1b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.0.aar/6c02fa36e725e78728463720951da59d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.0.aar/abd8bced198afad3af311992bb0d3759/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.0.aar/7c83942cd31d42430433d9788f387193/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.0.aar/98184913f3871393488e1ba6aba91336/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.0.aar/7c94d376e726603e52dd292733477ed7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/transition-27.1.0.aar/982f06bea45c6dc2da9941e8be947c79/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/77a41d3ff098e99eb547ab99adde9ae0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bd84d11728af9bba9bbaad200cfd2faa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e52d034d0ef4bd38596a2e0963cbe25b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/02940cbaaa92f57c6177b78c95628ea1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/93dd3fe67a342933429ec3143f299764/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9da5aa5da092cbcdca702a2500c1d221/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+	package
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:1-32:12
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:5:3-64
+	android:name
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:5:20-62
+application
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:7:3-30:17
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/6ac70edb640450bbf5e32465579778e6/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/6ac70edb640450bbf5e32465579778e6/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:12:7-33
+	android:label
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:10:7-39
+	android:roundIcon
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:11:7-52
+	android:icon
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:9:7-41
+	android:allowBackup
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:8:7-33
+	android:theme
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:13:7-38
+activity#fr.ec.producthunt.ui.home.MainActivity
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:14:5-22:16
+	android:label
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:16:9-41
+	android:name
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:15:9-45
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:17:7-21:23
+action#android.intent.action.MAIN
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:18:9-60
+	android:name
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:18:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:20:9-68
+	android:name
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:20:19-66
+activity#fr.ec.producthunt.ui.detail.DetailActivity
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:23:5-24:16
+	android:name
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:23:15-55
+service#fr.ec.producthunt.data.SyncService
+ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:26:5-29:15
+	android:exported
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:28:9-33
+	android:name
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml:27:9-41
+uses-sdk
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/f92f6f64b0d202075ab1c615d3d3475b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/f92f6f64b0d202075ab1c615d3d3475b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/692b001cbdbfd6ef26ca89abe751c0e6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/692b001cbdbfd6ef26ca89abe751c0e6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/6ac70edb640450bbf5e32465579778e6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/6ac70edb640450bbf5e32465579778e6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.0.aar/f400e36d56a0bcefab7cd7b33b0ed24a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.0.aar/f400e36d56a0bcefab7cd7b33b0ed24a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.0.aar/ec9bff82e7b698c4e9ca4b32d7c47c1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.0.aar/ec9bff82e7b698c4e9ca4b32d7c47c1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.0.aar/6c02fa36e725e78728463720951da59d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.0.aar/6c02fa36e725e78728463720951da59d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.0.aar/abd8bced198afad3af311992bb0d3759/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.0.aar/abd8bced198afad3af311992bb0d3759/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.0.aar/7c83942cd31d42430433d9788f387193/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.0.aar/7c83942cd31d42430433d9788f387193/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.0.aar/98184913f3871393488e1ba6aba91336/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.0.aar/98184913f3871393488e1ba6aba91336/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.0.aar/7c94d376e726603e52dd292733477ed7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.0.aar/7c94d376e726603e52dd292733477ed7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/transition-27.1.0.aar/982f06bea45c6dc2da9941e8be947c79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/transition-27.1.0.aar/982f06bea45c6dc2da9941e8be947c79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/77a41d3ff098e99eb547ab99adde9ae0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/77a41d3ff098e99eb547ab99adde9ae0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bd84d11728af9bba9bbaad200cfd2faa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bd84d11728af9bba9bbaad200cfd2faa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e52d034d0ef4bd38596a2e0963cbe25b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e52d034d0ef4bd38596a2e0963cbe25b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/02940cbaaa92f57c6177b78c95628ea1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/02940cbaaa92f57c6177b78c95628ea1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/93dd3fe67a342933429ec3143f299764/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/93dd3fe67a342933429ec3143f299764/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9da5aa5da092cbcdca702a2500c1d221/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/davidzerah/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9da5aa5da092cbcdca702a2500c1d221/AndroidManifest.xml:20:5-44
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/src/main/AndroidManifest.xml
