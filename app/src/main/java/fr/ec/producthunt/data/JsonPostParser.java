@@ -21,14 +21,13 @@ public class JsonPostParser {
       JSONArray postsJson = postsRespnse.getJSONArray("posts");
 
       int size = postsJson.length();
-
       ArrayList<Post> posts = new ArrayList(size);
 
       for (int i = 0; i < postsJson.length(); i++) {
         JSONObject postJson = (JSONObject) postsJson.get(i);
-
         posts.add(jsonToPost(postJson));
       }
+
 
       return posts;
     } catch (JSONException e) {
@@ -51,6 +50,7 @@ public class JsonPostParser {
     post.setPostUrl(postJson.getString("redirect_url"));
 
     post.setImageUrl(postJson.getJSONObject("thumbnail").getString("image_url"));
+    post.setcommentsCount(postJson.getString("comments_count") + " commentaires");
 
 
     return post;

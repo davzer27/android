@@ -8,6 +8,7 @@ import java.util.List;
 import fr.ec.producthunt.data.model.Collection;
 
 /**
+ * YABABAA
  * @author Mohammed Boukadir  @:mohammed.boukadir@gmail.com
  */
 public class CollectionDao {

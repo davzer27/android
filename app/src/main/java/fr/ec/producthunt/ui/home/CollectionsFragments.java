@@ -72,8 +72,8 @@ public class CollectionsFragments extends Fragment {
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         //TODO Gérer le click sur une collection
-//        Post post = (Post) parent.getAdapter().getItem(position);
-//        callback.onClickPost(post);
+//        Collection collection = (Collection) parent.getAdapter().getItem(position);
+//        callback.onClickCollection(collection);
 
       }
     });
@@ -170,7 +170,7 @@ public class CollectionsFragments extends Fragment {
   }
 
   public interface Callback {
-    void onClickPost(Post post);
+    void onClickCollection(Collection collection);
     //TODO Gérer le click sur une collection
   }
 }

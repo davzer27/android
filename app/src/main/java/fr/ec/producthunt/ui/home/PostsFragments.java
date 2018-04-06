@@ -32,7 +32,7 @@ public class PostsFragments extends Fragment {
   private static final int LIST_CHILD = 0;
 
   private DataProvider dataProvider;
-  private PostAdapter postAdapter;
+  private PostAdapterWithLargeIcon postAdapter;
   private ViewAnimator viewAnimator;
 
   private SyncPostReceiver syncPostReceiver;
@@ -60,7 +60,7 @@ public class PostsFragments extends Fragment {
 
     syncPostReceiver = new SyncPostReceiver();
 
-    postAdapter = new PostAdapter();
+    postAdapter = new PostAdapterWithLargeIcon();
 
     ListView listView = rootView.findViewById(R.id.list_item);
     listView.setEmptyView(rootView.findViewById(R.id.empty_element));
@@ -122,6 +122,7 @@ public class PostsFragments extends Fragment {
 
   public class SyncPostReceiver extends BroadcastReceiver {
     public static final String ACTION_LOAD_POSTS = "fr.ec.producthunt.data.action.LOAD_POSTS";
+
 
     public SyncPostReceiver() {
     }

@@ -22,7 +22,7 @@ import static android.content.ContentValues.TAG;
 public class DataProvider {
 
   public static final String POST_API_END_POINT =
-    "https://api.producthunt.com/v1/posts?access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
+    "https://api.producthunt.com/v1/posts?sort_by=created_at&order=asc&access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
 
   public static final String COLLECTION_API_END_POINT =
     "https://api.producthunt.com/v1/collections?search[featured]=true&access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
@@ -78,7 +78,7 @@ public class DataProvider {
       }
 
       if (buffer.length() == 0) {
-        // Si le stream est vide, on revoie null;
+        // Si le stream est vide, on renvoie null;
         return null;
       }
       posts = buffer.toString();
@@ -114,6 +114,20 @@ public class DataProvider {
   public Boolean syncPost() {
 
     List<Post> list = jsonPostParser.jsonToPosts(getShitFromWeb(POST_API_END_POINT));
+
+
+    int nb = 0;
+
+    for (Post post : list) {
+      postDao.save(post);
+      nb++;
+    }
+    return nb > 0;
+  }
+
+  public Boolean syncPostFromCollection(String url) {
+
+    List<Post> list = jsonPostParser.jsonToPosts(getShitFromWeb(url));
 
 
     int nb = 0;

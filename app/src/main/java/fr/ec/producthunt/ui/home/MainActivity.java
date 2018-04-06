@@ -7,8 +7,11 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -27,8 +30,18 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main_activity);
+    System.out.println("Toto");
 
-    FrameLayout detailContainer = findViewById(R.id.home_detail_container);
+    FrameLayout detailContainer = findViewById(R.id.detail_container);
+    System.out.println("-------");
+
+    Toolbar toolbar = findViewById(R.id.toolbar);
+    System.out.println(toolbar);
+    setSupportActionBar(toolbar);
+
+    ActionBar actionbar = getSupportActionBar();
+    actionbar.setDisplayHomeAsUpEnabled(true);
+    actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
     NavigationView navigationView = findViewById(R.id.nav_view);
     mDrawerLayout = findViewById(R.id.drawerLayout);
@@ -58,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
     if (detailContainer != null) {
       towPane = true;
       getSupportFragmentManager().beginTransaction()
-        .add(R.id.home_detail_container, DetailPostFragment.getNewInstance(null))
+        .add(R.id.detail_container, DetailPostFragment.getNewInstance(null))
         .commit();
     }
   }
@@ -68,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
 
     if (towPane) {
       DetailPostFragment detailPostFragment =
-        (DetailPostFragment) getSupportFragmentManager().findFragmentById(R.id.home_detail_container);
+        (DetailPostFragment) getSupportFragmentManager().findFragmentById(R.id.detail_container);
 
       if (detailPostFragment != null) {
         detailPostFragment.loadUrl(post.getPostUrl());
@@ -81,4 +94,15 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
       startActivity(intent);
     }
   }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case android.R.id.home:
+        mDrawerLayout.openDrawer(GravityCompat.START);
+        return true;
+    }
+    return super.onOptionsItemSelected(item);
+  }
+
 }
