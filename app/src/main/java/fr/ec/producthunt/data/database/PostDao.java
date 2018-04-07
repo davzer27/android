@@ -27,7 +27,8 @@ public class PostDao {
     Cursor cursor = productHuntDbHelper.getReadableDatabase()
         .query(DataBaseContract.PostTable.TABLE_NAME,
             DataBaseContract.PostTable.PROJECTIONS,
-            null, null, null, null, null);
+            null, null, null, null,
+                DataBaseContract.PostTable.POST_DATE_COLUMN+" DESC");
 
     List<Post> posts = new ArrayList<>(cursor.getCount());
 
@@ -41,7 +42,8 @@ public class PostDao {
         post.setSubTitle(cursor.getString(2));
         post.setImageUrl(cursor.getString(3));
         post.setPostUrl(cursor.getString(4));
-        post.setcommentsCount(cursor.getString(5));
+        post.setDate(cursor.getString(5));
+        post.setcommentsCount(cursor.getString(6));
 
         posts.add(post);
 
