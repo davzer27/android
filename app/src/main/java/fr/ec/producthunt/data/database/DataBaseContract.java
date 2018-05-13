@@ -97,7 +97,7 @@ public final class DataBaseContract {
     public static final String AUTHOR_HEADLINE_COLUMN = "authorheadline";
 
 
-    public static final String SQL_CREATE_COLLECTION_TABLE =
+    public static final String SQL_CREATE_COMMENT_TABLE =
             "CREATE TABLE " + CommentTable.TABLE_NAME + " (" +
                     ID_COLUMN + INTEGER_TYPE + " PRIMARY KEY" + COMM_SPA +
                     ID_POST_COLUMN + TEXT_TYPE + COMM_SPA +

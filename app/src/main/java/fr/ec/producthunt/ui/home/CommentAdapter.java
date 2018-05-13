@@ -1,5 +1,6 @@
 package fr.ec.producthunt.ui.home;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,15 +35,16 @@ public class CommentAdapter extends BaseAdapter {
     @Override public View getView(int position, View convertView, ViewGroup parent) {
 
         ViewHolder viewHolder;
-
+        Log.e("error ", String.valueOf(convertView == null));
         if (convertView == null) {
             convertView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item, parent, false);
+                    .inflate(R.layout.home_list_comment, parent, false);
 
             viewHolder = new ViewHolder();
             viewHolder.author = convertView.findViewById(R.id.author);
             viewHolder.authorusername = convertView.findViewById(R.id.authorusername);
             viewHolder.authorheadline = convertView.findViewById(R.id.authorheadline);
+            viewHolder.content = convertView.findViewById(R.id.content);
             viewHolder.profilPic = convertView.findViewById(R.id.profilpic);
 
             convertView.setTag(viewHolder);

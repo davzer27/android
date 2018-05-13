@@ -1,4 +1,4 @@
-#Wed May 02 19:32:26 BST 2018
-base.0=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/76
+#Sun May 13 22:25:22 CEST 2018
+base.0=/Users/pauldejean/Desktop/debug/app/build/intermediates/transforms/dexMerger/debug/1
 path.0=classes.dex
 renamed.0=classes.dex

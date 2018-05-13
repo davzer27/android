@@ -1,5 +1,7 @@
 package fr.ec.producthunt.data;
 
+import android.util.Log;
+
 import fr.ec.producthunt.data.model.Comment;
 import fr.ec.producthunt.data.model.Post;
 import java.util.ArrayList;
@@ -48,6 +50,7 @@ public class JsonCommentParser {
         comment.setAuthorHeadline(commentJson.getJSONObject("user").getString("headline"));
         comment.setAuthorProfilPicUrl(commentJson.getJSONObject("user").getJSONObject("image_url").getString("original"));
 
+        
         return comment;
     }
 }

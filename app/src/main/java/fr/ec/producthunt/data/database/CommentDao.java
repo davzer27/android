@@ -1,6 +1,7 @@
 package fr.ec.producthunt.data.database;
 
 import android.database.Cursor;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ public class CommentDao {
                 .query(DataBaseContract.CommentTable.TABLE_NAME,
                         DataBaseContract.CommentTable.PROJECTIONS,
                         null, null, null, null,
-                        DataBaseContract.CommentTable.DATE_COLUMN + "DESC");
+                        DataBaseContract.CommentTable.DATE_COLUMN + " DESC");
 
         List<Comment> comments = new ArrayList<>(cursor.getCount());
 

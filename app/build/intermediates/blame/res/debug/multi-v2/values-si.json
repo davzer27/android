@@ -1,42 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/borki/floobits/share/davidzerah/Producthunt-Demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml",
+            "outputFile": "/Users/pauldejean/Desktop/debug/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml",
             "map": [
                 {
-                    "source": "/home/borki/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/a0111f716adca5550a0e4948e16861f3/res/values-si/values-si.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1965",
-                        "endColumns": "100",
-                        "endOffsets": "2061"
-                    }
-                },
-                {
-                    "source": "/home/borki/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/dd7639d6850f5c229e13a8b449a1a128/res/values-si/values-si.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
-                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
-                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml",
-            "map": [
-                {
-                    "source": "/Users/davidzerah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/692b001cbdbfd6ef26ca89abe751c0e6/res/values-si/values-si.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/374ac7b4cfd8d5ee2a9e67ad1491055a/res/values-si/values-si.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -46,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bd84d11728af9bba9bbaad200cfd2faa/res/values-si/values-si.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/900ff5e4f21b28ce54941f1dd14ba30a/res/values-si/values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

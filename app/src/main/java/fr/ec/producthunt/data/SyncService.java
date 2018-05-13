@@ -8,6 +8,7 @@ import android.util.Log;
 
 import static android.content.ContentValues.TAG;
 import static fr.ec.producthunt.ui.home.CollectionsFragments.SyncCollectionReceiver.ACTION_LOAD_COLLECTIONS;
+import static fr.ec.producthunt.ui.home.CommentsFragments.SyncCommentReceiver.ACTION_LOAD_COMMENTS;
 import static fr.ec.producthunt.ui.home.PostsFragments.SyncPostReceiver.ACTION_LOAD_POSTS;
 
 /**
@@ -81,7 +82,7 @@ public class SyncService extends IntentService {
                 String url = intent.getStringExtra("url");
                 handleActionFetchNewPostsFromCollection(url);
             } else if (ACTION_FETCH_NEW_COMMENTS.equals(action)) {
-                String postId = intent.getStringExtra("postId");
+                Long postId = intent.getLongExtra("postId", 0);
                 handleActionFetchNewCommentsFromPostsId(postId);
         }
         }
@@ -115,11 +116,11 @@ public class SyncService extends IntentService {
         LocalBroadcastManager.getInstance(this).sendBroadcast(intentToSend);
     }
 
-    private void handleActionFetchNewCommentsFromPostsId(String idPost) {
+    private void handleActionFetchNewCommentsFromPostsId(Long idPost) {
 
         DataProvider.getInstance(this.getApplication()).syncComments(idPost);
         Intent intentToSend = new Intent();
-        intentToSend.setAction(ACTION_LOAD_POSTS);
+        intentToSend.setAction(ACTION_LOAD_COMMENTS);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intentToSend);
     }
 

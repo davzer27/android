@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,7 +61,7 @@ public class CommentsFragments extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.home_list_comment, container, false);
+        View rootView = inflater.inflate(R.layout.home_shit_list_fragment, container, false);
         /*if (getArguments() != null) {
             postId = getArguments().getLong(ARG_POSTID);
             System.out.println("-----");
@@ -91,7 +92,7 @@ public class CommentsFragments extends Fragment {
         super.onStart();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(SyncCommentReceiver.ACTION_LOAD_COMMENTS);
-        LocalBroadcastManager.getInstance(this.getContext())
+        LocalBroadcastManager.getInstance(getContext())
                 .registerReceiver(syncCommentReceiver, intentFilter);
     }
 
@@ -134,6 +135,8 @@ public class CommentsFragments extends Fragment {
     }
 
     private void refreshComments() {
+        Log.e("CommentFragment", "refreshing comments");
+        Log.e("args", "" +  getArguments().getLong(ARG_POSTID, 0));
         SyncService.startSyncCommentsFromPostId(getContext(), getArguments().getLong(ARG_POSTID)); //TODO
     }
 

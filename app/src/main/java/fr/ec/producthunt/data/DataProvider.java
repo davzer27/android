@@ -37,7 +37,7 @@ public class DataProvider {
   private final CommentDao commentDao;
   private static DataProvider dataProvider;
 
-  public static String returnTheAPIUrlForComment(String idPost) {
+  public static String returnTheAPIUrlForComment(Long idPost) {
     return "https://api.producthunt.com/v1/posts/"+idPost+"/comments?access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
   }
 
@@ -161,7 +161,7 @@ public class DataProvider {
     }
     return nb > 0;
   }
-  public Boolean syncComments(String postId) {
+  public Boolean syncComments(Long postId) {
     List<Comment> list = jsonCommentParser.jsonToComments(getShitFromWeb(returnTheAPIUrlForComment(postId)));
     int nb = 0;
     for (Comment comment : list) {

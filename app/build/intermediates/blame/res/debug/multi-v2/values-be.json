@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/borki/floobits/share/davidzerah/Producthunt-Demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
+            "outputFile": "/Users/pauldejean/Desktop/debug/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
             "map": [
                 {
-                    "source": "/home/borki/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/dd7639d6850f5c229e13a8b449a1a128/res/values-be/values-be.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,225,328,444,530,638,756,835,913,996,1102,1208,1306,1414,1519,1624,1793,1893",
-                        "endColumns": "119,102,115,85,107,117,78,77,82,105,105,97,107,104,104,168,99,80",
-                        "endOffsets": "220,323,439,525,633,751,830,908,991,1097,1203,1301,1409,1514,1619,1788,1888,1969"
-                    }
-                },
-                {
-                    "source": "/home/borki/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/a0111f716adca5550a0e4948e16861f3/res/values-be/values-be.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/900ff5e4f21b28ce54941f1dd14ba30a/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -29,37 +19,15 @@
                         "endColumns": "108",
                         "endOffsets": "2078"
                     }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
-            "map": [
+                },
                 {
-                    "source": "/Users/davidzerah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/692b001cbdbfd6ef26ca89abe751c0e6/res/values-be/values-be.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/374ac7b4cfd8d5ee2a9e67ad1491055a/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
                         "startOffsets": "105,225,328,444,530,638,756,835,913,996,1102,1208,1306,1414,1519,1624,1793,1893",
                         "endColumns": "119,102,115,85,107,117,78,77,82,105,105,97,107,104,104,168,99,80",
                         "endOffsets": "220,323,439,525,633,751,830,908,991,1097,1203,1301,1409,1514,1619,1788,1888,1969"
-                    }
-                },
-                {
-                    "source": "/Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bd84d11728af9bba9bbaad200cfd2faa/res/values-be/values-be.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "108",
-                        "endOffsets": "159"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1974",
-                        "endColumns": "108",
-                        "endOffsets": "2078"
                     }
                 }
             ]
