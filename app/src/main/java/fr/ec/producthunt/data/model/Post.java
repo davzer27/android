@@ -9,6 +9,7 @@ public class Post {
   private String imageUrl;
   private String postUrl;
   private String commentsCount;
+  private String date;
   private long id;
 
   public String getTitle() {
@@ -42,6 +43,14 @@ public class Post {
   public void setPostUrl(String postUrl) {
     this.postUrl = postUrl;
   }
+  public String getDate() {
+    return date;
+  }
+
+  public void setDate(String date) {
+    this.date = date;
+  }
+
 
   public void setId(long id) {
     this.id = id;

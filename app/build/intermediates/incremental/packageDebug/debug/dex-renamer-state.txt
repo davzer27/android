@@ -1,4 +1,4 @@
-#Fri Apr 06 07:37:12 BST 2018
+#Wed May 02 19:32:28 BST 2018
 path.1=classes.dex
 path.0=classes.dex
 renamed.5=classes6.dex
@@ -7,12 +7,12 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/34
-base.4=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/31
-base.3=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/33
-base.2=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/30
-base.1=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/35
-base.0=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/32
+base.5=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/92
+base.4=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/89
+base.3=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/91
+base.2=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/88
+base.1=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/90
+base.0=/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/transforms/dexMerger/debug/87
 path.5=classes.dex
 path.4=classes.dex
 path.3=classes.dex

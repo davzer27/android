@@ -13,5 +13,10 @@
             android:title="@string/collections_title"
             android:icon="@drawable/ic_collections"
             />
+        <item
+            android:id="@+id/nav_comment_temp"
+            android:title="Yababa"
+            android:icon="@drawable/ic_collections"
+            />
     </group>
 </menu>

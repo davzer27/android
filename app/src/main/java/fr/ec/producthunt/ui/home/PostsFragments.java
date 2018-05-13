@@ -24,6 +24,7 @@ import java.util.List;
 import fr.ec.producthunt.R;
 import fr.ec.producthunt.data.DataProvider;
 import fr.ec.producthunt.data.SyncService;
+import fr.ec.producthunt.data.model.Comment;
 import fr.ec.producthunt.data.model.Post;
 
 public class PostsFragments extends Fragment {
@@ -49,7 +50,7 @@ public class PostsFragments extends Fragment {
   public void onAttach(Context context) {
     super.onAttach(context);
     callback = (Callback) getActivity();
-  }
+    }
 
   @Nullable
   @Override
@@ -60,7 +61,7 @@ public class PostsFragments extends Fragment {
 
     syncPostReceiver = new SyncPostReceiver();
 
-    postAdapter = new PostAdapterWithLargeIcon();
+    postAdapter = new PostAdapterWithLargeIcon(callback);
 
     ListView listView = rootView.findViewById(R.id.list_item);
     listView.setEmptyView(rootView.findViewById(R.id.empty_element));
@@ -169,5 +170,6 @@ public class PostsFragments extends Fragment {
 
   public interface Callback {
     void onClickPost(Post post);
+    void onClickComment(Post post);
   }
 }

@@ -30,13 +30,10 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main_activity);
-    System.out.println("Toto");
 
     FrameLayout detailContainer = findViewById(R.id.detail_container);
-    System.out.println("-------");
 
     Toolbar toolbar = findViewById(R.id.toolbar);
-    System.out.println(toolbar);
     setSupportActionBar(toolbar);
 
     ActionBar actionbar = getSupportActionBar();
@@ -93,6 +90,14 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
 
       startActivity(intent);
     }
+  }
+
+  @Override
+  public void onClickComment(Post post) {
+    System.out.println("L'id du post est " +post.getId());
+    CommentsFragments fragment = CommentsFragments.newInstance(post.getId());
+    FragmentManager fm = getSupportFragmentManager();
+    fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
   }
 
   @Override

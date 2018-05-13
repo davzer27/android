@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "/home/borki/floobits/share/davidzerah/Producthunt-Demo/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/borki/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/dd7639d6850f5c229e13a8b449a1a128/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/davidzerah/Documents/Education/Centrale/G3/Android/Producthunt-Demo/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-port/values-port.xml",
             "map": [
                 {

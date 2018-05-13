@@ -24,6 +24,9 @@ public class SyncService extends IntentService {
     private static final String ACTION_FETCH_NEW_COLLECTIONS =
             "fr.ec.producthunt.data.action.FETCH_NEW_COLLECTIONS";
 
+    private static final String ACTION_FETCH_NEW_COMMENTS =
+            "fr.ec.producthunt.data.action.FETCH_NEW_COMMENTS";
+
     public SyncService() {
         super("SyncService");
     }
@@ -52,6 +55,13 @@ public class SyncService extends IntentService {
         context.startService(intent);
     }
 
+    public static void startSyncCommentsFromPostId(Context context, long postId) {
+        Intent intent = new Intent(context, SyncService.class);
+        intent.setAction(ACTION_FETCH_NEW_COMMENTS);
+        intent.putExtra("postId", postId);
+        context.startService(intent);
+    }
+
     public static void startSyncCollections(Context context) {
         Intent intent = new Intent(context, SyncService.class);
         intent.setAction(ACTION_FETCH_NEW_COLLECTIONS);
@@ -70,7 +80,10 @@ public class SyncService extends IntentService {
             } else if (ACTION_FETCH_NEW_POSTS_FROM_COLLECTION.equals(action)) {
                 String url = intent.getStringExtra("url");
                 handleActionFetchNewPostsFromCollection(url);
-            }
+            } else if (ACTION_FETCH_NEW_COMMENTS.equals(action)) {
+                String postId = intent.getStringExtra("postId");
+                handleActionFetchNewCommentsFromPostsId(postId);
+        }
         }
     }
 
@@ -101,4 +114,13 @@ public class SyncService extends IntentService {
         intentToSend.setAction(ACTION_LOAD_COLLECTIONS);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intentToSend);
     }
+
+    private void handleActionFetchNewCommentsFromPostsId(String idPost) {
+
+        DataProvider.getInstance(this.getApplication()).syncComments(idPost);
+        Intent intentToSend = new Intent();
+        intentToSend.setAction(ACTION_LOAD_POSTS);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intentToSend);
+    }
+
 }

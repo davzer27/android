@@ -12,9 +12,11 @@ import java.net.URL;
 import java.util.List;
 
 import fr.ec.producthunt.data.database.CollectionDao;
+import fr.ec.producthunt.data.database.CommentDao;
 import fr.ec.producthunt.data.database.PostDao;
 import fr.ec.producthunt.data.database.ProductHuntDbHelper;
 import fr.ec.producthunt.data.model.Collection;
+import fr.ec.producthunt.data.model.Comment;
 import fr.ec.producthunt.data.model.Post;
 
 import static android.content.ContentValues.TAG;
@@ -29,9 +31,15 @@ public class DataProvider {
 
   private JsonPostParser jsonPostParser = new JsonPostParser();
   private JsonCollectionParser jsonCollectionParser = new JsonCollectionParser();
+  private JsonCommentParser jsonCommentParser = new JsonCommentParser();
   private final PostDao postDao;
   private final CollectionDao collectionDao;
+  private final CommentDao commentDao;
   private static DataProvider dataProvider;
+
+  public static String returnTheAPIUrlForComment(String idPost) {
+    return "https://api.producthunt.com/v1/posts/"+idPost+"/comments?access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
+  }
 
   public static DataProvider getInstance(Application application) {
 
@@ -44,6 +52,7 @@ public class DataProvider {
   public DataProvider(ProductHuntDbHelper dbHelper) {
     collectionDao = new CollectionDao(dbHelper);
     postDao = new PostDao(dbHelper);
+    commentDao = new CommentDao(dbHelper);
   }
 
   private String getShitFromWeb(String apiUrl) {
@@ -110,6 +119,10 @@ public class DataProvider {
     return collectionDao.retrieveCollections();
   }
 
+  public List<Comment> getCommentsFromDatabase() {
+    return commentDao.retrieveCollections();
+  }
+
 
   public Boolean syncPost() {
 
@@ -148,5 +161,15 @@ public class DataProvider {
     }
     return nb > 0;
   }
+  public Boolean syncComments(String postId) {
+    List<Comment> list = jsonCommentParser.jsonToComments(getShitFromWeb(returnTheAPIUrlForComment(postId)));
+    int nb = 0;
+    for (Comment comment : list) {
+      commentDao.save(comment);
+      nb++;
+    }
+    return nb > 0;
+  }
+
 }
 

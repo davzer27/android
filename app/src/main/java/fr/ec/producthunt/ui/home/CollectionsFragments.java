@@ -71,9 +71,8 @@ public class CollectionsFragments extends Fragment {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        //TODO Gérer le click sur une collection
-//        Collection collection = (Collection) parent.getAdapter().getItem(position);
-//        callback.onClickCollection(collection);
+        Collection collection = (Collection) parent.getAdapter().getItem(position);
+        callback.onClickCollection(collection);
 
       }
     });
