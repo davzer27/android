@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
   @Override
   public void onClickComment(Post post) {
     System.out.println("L'id du post est " +post.getId());
-    CommentsFragments fragment = CommentsFragments.newInstance(post.getId());
+    CommentsFragments fragment = CommentsFragments.newInstance(post.getId(), post.getTitle());
     FragmentManager fm = getSupportFragmentManager();
     fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
   }

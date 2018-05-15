@@ -34,6 +34,7 @@ public class CommentsFragments extends Fragment {
     private static final int PROGRESS_CHILD = 1;
     private static final int LIST_CHILD = 0;
     private static final String ARG_POSTID = "postId";
+    private static final String ARG_POSTTITLE = "postTitle";
     private long postId;
 
     private DataProvider dataProvider;
@@ -42,10 +43,11 @@ public class CommentsFragments extends Fragment {
 
     private SyncCommentReceiver syncCommentReceiver;
 
-    public static CommentsFragments newInstance(long postId) {
+    public static CommentsFragments newInstance(long postId, String postTitle) {
         CommentsFragments fragment = new CommentsFragments();
         Bundle args = new Bundle();
         args.putLong(ARG_POSTID, postId);
+        args.putString(ARG_POSTTITLE, postTitle);
         fragment.setArguments(args);
         return fragment;
     }
@@ -77,6 +79,8 @@ public class CommentsFragments extends Fragment {
         viewAnimator = rootView.findViewById(R.id.main_view_animator);
         listView.setAdapter(commentAdapter);
         refreshComments();
+
+        getActivity().setTitle(getArguments().getString(ARG_POSTTITLE));
         return rootView;
     }
 

@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/davidzerah/Documents/Mini Projet/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
+            "outputFile": "/Users/pauldejean/Desktop/davzer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
             "map": [
                 {
-                    "source": "/Users/davidzerah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/692b001cbdbfd6ef26ca89abe751c0e6/res/values-ms/values-ms.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,216,321,429,516,620,731,809,888,968,1080,1189,1286,1395,1498,1605,1764,1865",
-                        "endColumns": "110,104,107,86,103,110,77,78,79,111,108,96,108,102,106,158,100,79",
-                        "endOffsets": "211,316,424,511,615,726,804,883,963,1075,1184,1281,1390,1493,1600,1759,1860,1940"
-                    }
-                },
-                {
-                    "source": "/Users/davidzerah/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bd84d11728af9bba9bbaad200cfd2faa/res/values-ms/values-ms.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/900ff5e4f21b28ce54941f1dd14ba30a/res/values-ms/values-ms.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "1945",
                         "endColumns": "100",
                         "endOffsets": "2041"
+                    }
+                },
+                {
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/374ac7b4cfd8d5ee2a9e67ad1491055a/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,216,321,429,516,620,731,809,888,968,1080,1189,1286,1395,1498,1605,1764,1865",
+                        "endColumns": "110,104,107,86,103,110,77,78,79,111,108,96,108,102,106,158,100,79",
+                        "endOffsets": "211,316,424,511,615,726,804,883,963,1075,1184,1281,1390,1493,1600,1759,1860,1940"
                     }
                 }
             ]
