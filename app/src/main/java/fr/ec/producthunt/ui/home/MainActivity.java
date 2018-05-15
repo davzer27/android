@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
   private boolean towPane;
   private DrawerLayout mDrawerLayout;
 
+
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

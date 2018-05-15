@@ -64,6 +64,7 @@ public class CommentAdapter extends BaseAdapter {
                 .load(comment.getAuthorProfilPicUrl())
                 .centerCrop()
                 .fit()
+                .transform(new CircleTransform())
                 .into(viewHolder.profilPic);
 
         return convertView;

@@ -162,6 +162,9 @@ public class DataProvider {
     return nb > 0;
   }
   public Boolean syncComments(Long postId) {
+    System.out.println("-----");
+    System.out.println(returnTheAPIUrlForComment(postId));
+    System.out.println("-------");
     List<Comment> list = jsonCommentParser.jsonToComments(getShitFromWeb(returnTheAPIUrlForComment(postId)));
     int nb = 0;
     for (Comment comment : list) {
