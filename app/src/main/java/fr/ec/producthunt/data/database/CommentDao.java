@@ -25,13 +25,13 @@ public class CommentDao {
                 .replace(DataBaseContract.CommentTable.TABLE_NAME, null, comment.toContentValues());
     }
 
-    public List<Comment> retrieveCollections() {
+    public List<Comment> retrieveComments(long postId) {
 
-
+        String selection = "post_id = " + postId;
         Cursor cursor = productHuntDbHelper.getReadableDatabase()
                 .query(DataBaseContract.CommentTable.TABLE_NAME,
                         DataBaseContract.CommentTable.PROJECTIONS,
-                        null, null, null, null,
+                        selection, null, null, null,
                         DataBaseContract.CommentTable.DATE_COLUMN + " DESC");
 
         List<Comment> comments = new ArrayList<>(cursor.getCount());

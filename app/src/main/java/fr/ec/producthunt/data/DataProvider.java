@@ -29,6 +29,8 @@ public class DataProvider {
   public static final String COLLECTION_API_END_POINT =
     "https://api.producthunt.com/v1/collections?search[featured]=true&access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
 
+
+
   private JsonPostParser jsonPostParser = new JsonPostParser();
   private JsonCollectionParser jsonCollectionParser = new JsonCollectionParser();
   private JsonCommentParser jsonCommentParser = new JsonCommentParser();
@@ -119,8 +121,8 @@ public class DataProvider {
     return collectionDao.retrieveCollections();
   }
 
-  public List<Comment> getCommentsFromDatabase() {
-    return commentDao.retrieveCollections();
+  public List<Comment> getCommentsFromDatabase(long postId) {
+    return commentDao.retrieveComments(postId);
   }
 
 
@@ -172,6 +174,14 @@ public class DataProvider {
       nb++;
     }
     return nb > 0;
+  }
+
+  public List<Post> getPostsFromCollection(long collectionId){
+     String POSTS_FROM_COLLECTION_API_END_POINT =
+            "https://api.producthunt.com/v1/collections/" + collectionId + "?access_token=46a03e1c32ea881c8afb39e59aa17c936ff4205a8ed418f525294b2b45b56abb";
+
+    List<Post> list = jsonPostParser.jsonCollectionToPosts(getShitFromWeb(POSTS_FROM_COLLECTION_API_END_POINT));
+    return list;
   }
 
 }

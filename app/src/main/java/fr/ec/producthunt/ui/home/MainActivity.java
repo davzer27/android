@@ -17,11 +17,12 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import fr.ec.producthunt.R;
+import fr.ec.producthunt.data.model.Collection;
 import fr.ec.producthunt.data.model.Post;
 import fr.ec.producthunt.ui.detail.DetailActivity;
 import fr.ec.producthunt.ui.detail.DetailPostFragment;
 
-public class MainActivity extends AppCompatActivity implements PostsFragments.Callback {
+public class MainActivity extends AppCompatActivity implements PostsFragments.Callback, CollectionsFragments.Callback {
 
   private boolean towPane;
   private DrawerLayout mDrawerLayout;
@@ -91,6 +92,13 @@ public class MainActivity extends AppCompatActivity implements PostsFragments.Ca
 
       startActivity(intent);
     }
+  }
+
+  @Override
+  public void onClickCollection(Collection collection) {
+    PostsFragments fragment = PostsFragments.newInstance(collection.getId());
+    FragmentManager fm = getSupportFragmentManager();
+    fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
   }
 
   @Override

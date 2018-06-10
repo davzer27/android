@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -42,6 +43,7 @@ public class CommentsFragments extends Fragment {
     private ViewAnimator viewAnimator;
 
     private SyncCommentReceiver syncCommentReceiver;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     public static CommentsFragments newInstance(long postId, String postTitle) {
         CommentsFragments fragment = new CommentsFragments();
@@ -72,12 +74,21 @@ public class CommentsFragments extends Fragment {
         }*/
         syncCommentReceiver = new SyncCommentReceiver();
 
+
         commentAdapter = new CommentAdapter();
 
         ListView listView = rootView.findViewById(R.id.list_item);
         listView.setEmptyView(rootView.findViewById(R.id.empty_element));
         viewAnimator = rootView.findViewById(R.id.main_view_animator);
         listView.setAdapter(commentAdapter);
+        swipeRefreshLayout = rootView.findViewById(R.id.swipeRefreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshComments();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         refreshComments();
 
         getActivity().setTitle(getArguments().getString(ARG_POSTTITLE));
@@ -88,7 +99,7 @@ public class CommentsFragments extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         dataProvider = DataProvider.getInstance(getActivity().getApplication());
-        loadComments();
+        loadComments(getArguments().getLong(ARG_POSTID));
     }
 
     @Override
@@ -133,7 +144,7 @@ public class CommentsFragments extends Fragment {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent != null && intent.getAction().equals(ACTION_LOAD_COMMENTS)) {
-                loadComments();
+                loadComments(getArguments().getLong(ARG_POSTID));
             }
         }
     }
@@ -144,12 +155,12 @@ public class CommentsFragments extends Fragment {
         SyncService.startSyncCommentsFromPostId(getContext(), getArguments().getLong(ARG_POSTID)); //TODO
     }
 
-    private void loadComments() {
+    private void loadComments(long postId) {
         FetchCommentAsyncTask fetchCommentAsyncTask = new FetchCommentAsyncTask();
-        fetchCommentAsyncTask.execute();
+        fetchCommentAsyncTask.execute(postId);
     }
 
-    private class FetchCommentAsyncTask extends AsyncTask<Void, Void, List<Comment>> {
+    private class FetchCommentAsyncTask extends AsyncTask<Long, Void, List<Comment>> {
 
         @Override
         protected void onPreExecute() {
@@ -158,9 +169,9 @@ public class CommentsFragments extends Fragment {
         }
 
         @Override
-        protected List<Comment> doInBackground(Void... params) {
-
-            return dataProvider.getCommentsFromDatabase();
+        protected List<Comment> doInBackground(Long... params) {
+            long postId = params[0];
+            return dataProvider.getCommentsFromDatabase(postId);
         }
 
         @Override

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\pauldejean\\Desktop\\davzer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "outputFile": "/Users/pauldejean/Desktop/david-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml",
             "map": [
                 {
-                    "source": "D:\\Users\\pauldejean\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\900ff5e4f21b28ce54941f1dd14ba30a\\res\\values-ar\\values-ar.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/900ff5e4f21b28ce54941f1dd14ba30a/res/values-ar/values-ar.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,39 +21,7 @@
                     }
                 },
                 {
-                    "source": "D:\\Users\\pauldejean\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\374ac7b4cfd8d5ee2a9e67ad1491055a\\res\\values-ar\\values-ar.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,222,326,435,517,618,732,811,890,969,1074,1175,1271,1379,1482,1585,1740,1837",
-                        "endColumns": "116,103,108,81,100,113,78,78,78,104,100,95,107,102,102,154,96,80",
-                        "endOffsets": "217,321,430,512,613,727,806,885,964,1069,1170,1266,1374,1477,1580,1735,1832,1913"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "D:\\Android\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\lilzw\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\a30abb8fb9e4f5caab3f30f43a990949\\res\\values-ar\\values-ar.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1918",
-                        "endColumns": "100",
-                        "endOffsets": "2014"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lilzw\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\7f1339aa8d83f71114951b77972ae08d\\res\\values-ar\\values-ar.xml",
+                    "source": "/Users/pauldejean/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/374ac7b4cfd8d5ee2a9e67ad1491055a/res/values-ar/values-ar.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -35,10 +36,13 @@ public class CollectionsFragments extends Fragment {
   private DataProvider dataProvider;
   private CollectionAdapter collectionAdapter;
   private ViewAnimator viewAnimator;
+  private SwipeRefreshLayout swipeRefreshLayout;
 
   private SyncCollectionReceiver syncCollectionReceiver;
 
+  private static final String ARG_COLLECTION_ID = "collectionId";
   private Callback callback;
+
 
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,7 +54,7 @@ public class CollectionsFragments extends Fragment {
   public void onAttach(Context context) {
     super.onAttach(context);
     //TODO Gérer le click sur une collection
-//    callback = (Callback) getActivity();
+       callback = (Callback) getActivity();
   }
 
   @Nullable
@@ -76,8 +80,19 @@ public class CollectionsFragments extends Fragment {
 
       }
     });
+
+
     viewAnimator = rootView.findViewById(R.id.main_view_animator);
     listView.setAdapter(collectionAdapter);
+
+    swipeRefreshLayout = rootView.findViewById(R.id.swipeRefreshLayout);
+    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        refreshCollections();
+        swipeRefreshLayout.setRefreshing(false);
+      }
+    });
     refreshCollections();
     return rootView;
   }

@@ -1,4 +1,4 @@
-#Tue May 15 20:25:01 CEST 2018
-base.0=/Users/pauldejean/Desktop/davzer/app/build/intermediates/transforms/dexMerger/debug/6
+#Mon Jun 11 00:33:49 CEST 2018
+base.0=/Users/pauldejean/Desktop/david-android/app/build/intermediates/transforms/dexMerger/debug/7
 path.0=classes.dex
 renamed.0=classes.dex

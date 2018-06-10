@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,12 +39,24 @@ public class PostsFragments extends Fragment {
   private ViewAnimator viewAnimator;
 
   private SyncPostReceiver syncPostReceiver;
+  private SwipeRefreshLayout swipeRefreshLayout;
+
+  public static String ARG_COLLECTIONID = "collectionId";
 
   private Callback callback;
+
+  public static PostsFragments newInstance(long collectionId) {
+    PostsFragments fragment = new PostsFragments();
+    Bundle args = new Bundle();
+    args.putLong(ARG_COLLECTIONID, collectionId);
+    fragment.setArguments(args);
+    return fragment;
+  }
 
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     this.setHasOptionsMenu(true);
   }
 
@@ -77,6 +91,14 @@ public class PostsFragments extends Fragment {
     });
     viewAnimator = rootView.findViewById(R.id.main_view_animator);
     listView.setAdapter(postAdapter);
+    swipeRefreshLayout = rootView.findViewById(R.id.swipeRefreshLayout);
+    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        refreshPosts();
+        swipeRefreshLayout.setRefreshing(false);
+      }
+    });
     refreshPosts();
     return rootView;
   }
@@ -85,16 +107,28 @@ public class PostsFragments extends Fragment {
   public void onActivityCreated(@Nullable Bundle savedInstanceState) {
     super.onActivityCreated(savedInstanceState);
     dataProvider = DataProvider.getInstance(getActivity().getApplication());
-    loadPosts();
+
+    if(getArguments() != null) {
+        loadPostsFromCollection(getArguments().getLong(ARG_COLLECTIONID));
+
+    }
+    else {
+        loadPosts();
+    }
+
   }
 
   @Override
   public void onStart() {
     super.onStart();
-    IntentFilter intentFilter = new IntentFilter();
-    intentFilter.addAction(SyncPostReceiver.ACTION_LOAD_POSTS);
-    LocalBroadcastManager.getInstance(this.getContext())
-      .registerReceiver(syncPostReceiver, intentFilter);
+
+    if(getArguments() == null) {
+      IntentFilter intentFilter = new IntentFilter();
+
+      intentFilter.addAction(SyncPostReceiver.ACTION_LOAD_POSTS);
+      LocalBroadcastManager.getInstance(this.getContext())
+              .registerReceiver(syncPostReceiver, intentFilter);
+    }
   }
 
   @Override
@@ -131,7 +165,7 @@ public class PostsFragments extends Fragment {
     @Override
     public void onReceive(Context context, Intent intent) {
       if (intent != null && intent.getAction().equals(ACTION_LOAD_POSTS)) {
-        loadPosts();
+          loadPosts();
       }
     }
   }
@@ -143,6 +177,12 @@ public class PostsFragments extends Fragment {
   private void loadPosts() {
     FetchPostsAsyncTask fetchPstsAsyncTask = new FetchPostsAsyncTask();
     fetchPstsAsyncTask.execute();
+
+  }
+
+  private void loadPostsFromCollection(long collectionId) {
+    FetchPostsFromCollectionAsyncTask fetchPstsAsyncTask = new FetchPostsFromCollectionAsyncTask();
+    fetchPstsAsyncTask.execute(collectionId);
   }
 
   private class FetchPostsAsyncTask extends AsyncTask<Void, Void, List<Post>> {
@@ -157,6 +197,29 @@ public class PostsFragments extends Fragment {
     protected List<Post> doInBackground(Void... params) {
 
       return dataProvider.getPostsFromDatabase();
+    }
+
+    @Override
+    protected void onPostExecute(List<Post> posts) {
+      if (posts != null && !posts.isEmpty()) {
+        postAdapter.showPosts(posts);
+      }
+      viewAnimator.setDisplayedChild(LIST_CHILD);
+    }
+  }
+
+  private class FetchPostsFromCollectionAsyncTask extends AsyncTask<Long, Void, List<Post>> {
+
+    @Override
+    protected void onPreExecute() {
+      super.onPreExecute();
+      viewAnimator.setDisplayedChild(PROGRESS_CHILD);
+    }
+
+    @Override
+    protected List<Post> doInBackground(Long... params) {
+      long collectionId = params[0];
+      return dataProvider.getPostsFromCollection(collectionId);
     }
 
     @Override
